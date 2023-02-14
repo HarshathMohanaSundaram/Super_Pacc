@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>MY ORDERS</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item style="height: 150px;" text-wrap *ngFor="let iteme of nadalist">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/meals.jpg" />
+      </ion-thumbnail>
+      <h2><b>{{iteme.orderdate}}</b></h2>
+      <h3><b>{{iteme.ordertime}}</b></h3>
+      <h4>{{iteme.foodname}}</h4>
+      <p style="margin-top: 15px;color:green ;" (click)="ps()"> ₹{{iteme.foodprice}}</p>
+      <button ion-button clear item-end (click)="feed(iteme.sno,iteme.food_id,iteme.passenger_id,iteme.order_id,iteme.foodname,
+      iteme.quantity,iteme.description,iteme.foodprice,iteme.payment,iteme.status,iteme.seatno)">Feedback</button>
+      <button ion-button clear style="color: red;" item-end (click)="cancel(iteme.sno,iteme.food_id,iteme.passenger_id,iteme.order_id,iteme.foodname,
+      iteme.quantity,iteme.description,iteme.foodprice,iteme.payment,iteme.status,iteme.seatno)">Cancel</button>
+      <a className='btton'href="https://rzp.io/l/dBy77HQc">Buy Foods</a>
+    </ion-item>
+  </ion-list>
+</ion-content>

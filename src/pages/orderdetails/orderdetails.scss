@@ -1,0 +1,37 @@
+page-orderdetails {
+    .dimg{
+        width: 100%;
+      }
+      .card{
+        background-color: whitesmoke;
+      }
+      .labh{
+        font-size: 18px;
+        text-align: center;
+        font-weight: 500;
+      }
+      .cn{
+        margin-left: 36%;
+        font-size: 20px;
+        color: red;
+        //font-weight: bold;
+      }
+      .lab{
+        margin-left: 10%;
+      }
+      .txt{
+        font-size: 20px;
+       // color: black;
+       // font-weight: 600;
+        bottom: 5px;
+      }
+      .btns{
+        // position: absolute;
+        width: 60%;
+        margin-left: 24%;
+         margin-top: 10%;
+         background: #e1ad01;
+         border-color: #028364;
+         border-radius: 15px;
+     }
+}

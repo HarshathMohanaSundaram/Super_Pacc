@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>FOOD REQUEST</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item text-wrap *ngFor="let iteme of nadalist">
+      <ion-avatar item-start>
+        <img src="assets/imgs/{{iteme.image}}" />
+      </ion-avatar>
+      <h2>{{iteme.orderdate}}</h2>
+      <h3>{{iteme.ordertime}}</h3>
+      <h4>{{iteme.foodname}}</h4>
+      <p>{{iteme.counting}}</p>
+      <p>{{iteme.order_id}}</p>
+      <p style="color:red">{{iteme.feed}}</p>
+
+      <button ion-button clear item-end (click)="odetail(iteme.sno,iteme.food_id,iteme.passenger_id,iteme.order_id,iteme.foodname,
+      iteme.quantity,iteme.description,iteme.foodprice,iteme.payment,iteme.status,iteme.seatno,iteme.passname,iteme.mobile,iteme.counting,iteme.orderdate)">View</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

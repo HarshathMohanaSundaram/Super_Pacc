@@ -1,0 +1,7 @@
+{
+  "name": "tmp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

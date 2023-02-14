@@ -1,0 +1,113 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>PASSENGER</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <ion-slides  class="home_slider" autoplay="2000" loop="true" speed="500">
+            <ion-slide *ngFor="let item of foodSlider" (click)="goToTrending()">
+                <div class="slider_back" [style.backgroundImage]="'url('+ item.img +')'">
+                    <div class="gradient_div">
+                        <div class="abs_div">
+                            <ion-label class="bold_lbl">Thai Style</ion-label>
+                            <ion-label class="small_lbl1">12 Places</ion-label>
+                        </div>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slides>
+        <div class="content_div">
+            <div class="header_div">
+                <ion-label Class="title_lbl">Snacks Foods and Drinks</ion-label>
+            </div>
+            <div class="custom_slider">
+                <div class="slide_box" *ngFor="let iteme of nadalist" (click)="goToRest(iteme.sno,iteme.food_id,iteme.foodname,
+                iteme.quantity,iteme.description,iteme.foodprice)">
+                <img class="slide1_img" src="assets/imgs/{{iteme.image}}" />
+                <div class="detail1_div">
+                        <ion-label class="bold_lbl">{{iteme.foodname}}</ion-label>
+                        <ion-label class="grey_lbl">{{iteme.description}}</ion-label>
+                        <ion-label class="small_lbl">₹ {{iteme.foodprice}}</ion-label>
+                    </div>
+                </div>
+            </div>
+            <div class="header_div">
+                <ion-label Class="title_lbl">Break Fast Foods</ion-label>
+            </div>
+            <div class="custom_slider">
+                <div class="slide_box" *ngFor="let iteme of nadalist1" (click)="goToRest(iteme.sno,iteme.food_id,iteme.foodname,
+                iteme.quantity,iteme.description,iteme.foodprice)">
+                    <img class="slide1_img" src="assets/imgs/{{iteme.image}}" />
+                    <div class="detail1_div">
+                        <ion-label class="bold_lbl">{{iteme.foodname}}</ion-label>
+                        <ion-label class="grey_lbl">{{iteme.description}}</ion-label>
+                        <ion-label class="small_lbl">₹ {{iteme.foodprice}}</ion-label>
+                    </div>
+                </div>
+            </div>
+            <div class="header_div">
+                <ion-label Class="title_lbl">Lunch Foods</ion-label>
+            </div>
+            <div class="custom_slider">
+                <div class="slide_box" *ngFor="let iteme of nadalist2" (click)="goToRest(iteme.sno,iteme.food_id,iteme.foodname,
+                iteme.quantity,iteme.description,iteme.foodprice)">
+                    <img class="slide1_img" src="assets/imgs/{{iteme.image}}" />
+                    <div class="gradient_div">
+                        <div class="detail1_div">
+                            <ion-label class="bold_lbl">{{iteme.foodname}}</ion-label>
+                            <ion-label class="grey_lbl">{{iteme.description}}</ion-label>
+                            <ion-label class="small_lbl">₹ {{iteme.foodprice}}</ion-label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_div">
+                <ion-label Class="title_lbl">Dinner Foods</ion-label>
+            </div>
+            <div class="custom_slider">
+                <div class="slide_box" *ngFor="let iteme of nadalist3" (click)="goToRest(iteme.sno,iteme.food_id,iteme.foodname,
+                iteme.quantity,iteme.description,iteme.foodprice)">
+                    <img class="slide1_img" src="assets/imgs/{{iteme.image}}" />
+                    <div class="gradient_div">
+                        <div class="detail1_div">
+                            <ion-label class="bold_lbl">{{iteme.foodname}}</ion-label>
+                            <ion-label class="grey_lbl">{{iteme.description}}</ion-label>
+                            <ion-label class="small_lbl">₹ {{iteme.foodprice}}</ion-label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer style="height: 10%;">
+    <ion-row style="margin-left: 10%;">
+        <ion-col>
+            <button style="background-color: white;" (click)="home()">
+                <ion-icon name="home"></ion-icon>
+                <p>Home</p>
+            </button>
+        </ion-col>
+        <ion-col>
+            <button style="background-color: white;" (click)="search()">
+                <ion-icon name="search"></ion-icon>
+                <p>Search</p>
+            </button>
+        </ion-col>
+        <ion-col>
+            <button style="background-color: white;" (click)="order()">
+                <ion-icon name="cart"></ion-icon>
+                <p>MyOrders</p>
+            </button>
+        </ion-col>
+        <!-- <ion-col>
+            <button style="background-color: white;">
+                <ion-icon name="contact"></ion-icon>
+                <p>Profile</p>
+            </button>
+        </ion-col> -->
+    </ion-row>
+</ion-footer>

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ORDER DETAILS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <img class="dimg" src="assets/imgs/snacks.jpg" />
+    <div>
+      <ion-card>
+        <ion-row>
+          <ion-col col-12>
+            <ion-input disabled="{{isDisabled}}" class="txt" type="text" [(ngModel)]="orderid"></ion-input>
+            <ion-label class="labh">ORDER DETAILS</ion-label>
+          </ion-col>
+          <ion-col col-6>
+            <ion-label class="lab">Passenger Name</ion-label>
+          </ion-col>
+          <ion-col col-6>
+            <ion-input class="lab" disabled="{{isDisabled}}" class="txt" type="text" [(ngModel)]="passname"></ion-input>
+          </ion-col>
+          <ion-col col-6>
+            <ion-label class="lab">Passenger Mobile</ion-label>
+          </ion-col>
+          <ion-col col-6>
+            <ion-input class="lab" disabled="{{isDisabled}}" class="txt" type="text" [(ngModel)]="mobile"></ion-input>
+          </ion-col>
+          <ion-col col-6>
+            <ion-label class="lab">Passenger Seat No</ion-label>
+          </ion-col>
+          <ion-col col-6>
+            <ion-input class="lab" disabled="{{isDisabled}}" class="txt" type="text" [(ngModel)]="seat"></ion-input>
+          </ion-col>
+          <ion-col col-6>
+            <ion-label class="lab">Food Name</ion-label>
+          </ion-col>
+          <ion-col col-6>
+            <ion-input class="lab" disabled="{{isDisabled}}" class="txt" type="text" [(ngModel)]="fname"></ion-input>
+          </ion-col>
+          <ion-col col-6>
+            <ion-label class="lab">Description</ion-label>
+          </ion-col>
+          <ion-col col-6>
+            <ion-input class="lab" disabled="{{isDisabled}}" class="txt" type="text" [(ngModel)]="desc"></ion-input>
+          </ion-col>
+          <ion-col col-6>
+            <ion-label class="lab">Quantity</ion-label>
+          </ion-col>
+          <ion-col col-6>
+            <ion-input class="lab" disabled="{{isDisabled}}" class="txt" type="text" [(ngModel)]="set"></ion-input>
+          </ion-col>
+          <ion-col col-6>
+            <ion-label class="lab">Price</ion-label>
+          </ion-col>
+          <ion-col col-6>
+            <ion-input class="lab" disabled="{{isDisabled}}" class="txt" type="text" [(ngModel)]="fprice"></ion-input>
+          </ion-col>
+          <ion-col col-6>
+            <ion-label class="lab">Payment</ion-label>
+          </ion-col>
+          <ion-col col-6>
+            <ion-input class="lab" disabled="{{isDisabled}}" class="txt" type="text" [(ngModel)]="pay"></ion-input>
+          </ion-col>
+          <ion-col col-6>
+            <ion-label class="lab">Date</ion-label>
+          </ion-col>
+          <ion-col col-6>
+            <ion-input class="lab" disabled="{{isDisabled}}" class="txt"  type="text" [(ngModel)]="date"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+      <button class="btns" ion-button full (click)="submitForm()">Order Update</button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>FEEDBACK</ion-title>
+    <button ion-button style="color: red;" clear (click)="out()">Logout</button>
+
+  </ion-navbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <h3 class="title">Your opinion</h3>
+  <ion-input
+    style="border:1px solid red;border-radius: 40px;width: 60%;margin-left: 20%;margin-bottom: -15%;text-align: center;"
+    type="text" placeholder="Feedback" [(ngModel)]="fb"></ion-input>
+  <div class="desc">
+    <div class="howWas">
+      <h2 class="howWasText">So how was it?</h2>
+      <h2 class="about">
+        Because at |Your Service| we are concerned about the satisfaction of our customers, we would find out how
+        your  delivery has passed. Promised, it will only take 2 minutes!
+      </h2>
+    </div>
+  </div>
+  <div class="ratingBox">
+    <h2 class="txt">Rate Now</h2>
+    <ion-icon color="primary" style="font-size:40px;" *ngFor="let item of list;let i = index"
+      [name]="condition <= i? 'star-outline' :'star' " (click)="review(i)">
+    </ion-icon>
+    <button expand="full" shape="round" class="sendBtn" (click)="ratnow()">Rate It</button>
+  </div>
+</ion-content>

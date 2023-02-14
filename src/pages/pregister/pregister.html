@@ -1,0 +1,27 @@
+<ion-content class="background-page">
+  <img class="img" src="assets/imgs/slide3.jpg" />
+  <div class="div">
+    <img class="imgs" src="assets/imgs/trl.png" />
+    <ion-label class="head_lbl">Passenger Registrer</ion-label>
+    <ion-label class="small_lbl">Username</ion-label>
+    <ion-input type="text" placeholder="Username" [(ngModel)]="username"></ion-input>
+    <ion-label class="small_lbl">Mobile</ion-label>
+    <ion-input type="text" placeholder="Mobile" [(ngModel)]="phone"></ion-input>
+    <ion-label class="small_lbl">Email</ion-label>
+    <ion-input type="text" placeholder="Email" [(ngModel)]="emailid"></ion-input>
+    <ion-label class="small_lbl">Password</ion-label>
+    <ion-input type="text" placeholder="Password" [(ngModel)]="pass"></ion-input>
+    <ion-label class="forgot">Forgot Password</ion-label>
+    <button ion-button expand="block" fill="outline" (click)="submitForm()">
+      Submit
+    </button>
+    <ion-row style="margin-left: 10%;">
+      <ion-col>
+        <ion-label style="color:white;font-size: 18px;">Already User ? </ion-label>
+      </ion-col>
+      <ion-col>
+        <p style="color: red;margin-left: -98%;font-size: 18px;margin-top:0.6em" (click)="log()">SignIn</p>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

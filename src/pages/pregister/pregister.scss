@@ -1,0 +1,93 @@
+page-pregister {
+    position: relative;
+
+    .back_image {
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .background-page {
+
+        .img {
+            width: 100%;
+            height: 100%;
+            //position: absolute;
+        }
+
+        .div {
+            position: absolute;
+            text-align: center;
+            top: -1%;
+            //font-size: 2.0em;
+            width: 100%;
+            margin-left: 10%;
+            font-weight: bold;
+            color: red;
+
+            .head_lbl {
+                text-align: center;
+                color: white;
+                font-weight: 600;
+                font-size: 25px;
+                margin-bottom: 20px;
+                margin-left: -10%;
+            }
+
+            ion-label {
+                display: block;
+            }
+
+            .small_lbl {
+                color: white;
+                margin-bottom: 5px;
+                font-size: 18px;
+                margin-left: -74%;
+            }
+
+            ion-input {
+                border: 1px solid white;
+                --padding-start: 8px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+                -color: white;
+                color: white;
+                width: 80%;
+                height: 4%;
+            }
+
+            .forgot {
+                text-align: center;
+                color: white;
+                margin-left: 30%;
+            }
+
+            button {
+                border-radius: 5px;
+                border-color: white;
+                background-color: #e1ad01;
+                font-weight: 600;
+                margin-top: 20px;
+                margin-left: -15%;
+            }
+        }
+
+        .btns {
+            // position: absolute;
+            width: 60%;
+            margin-left: 24%;
+            margin-top: 2%;
+            background: #e1ad01;
+            border-color: #028364;
+            border-radius: 15px;
+        }
+
+        .imgs {
+            height: 120px;
+            width: 36%;
+            border-radius: 50%;
+            margin-left: -15%;
+        }
+    }
+}

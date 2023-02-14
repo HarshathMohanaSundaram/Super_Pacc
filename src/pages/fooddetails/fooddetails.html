@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>FOOD DETAILS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="card_box" *ngFor="let item of (restaurants | slice: 0:1)">
+      <div class="back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+      <div class="detail_div">
+        <ion-input class="bold_name" disabled="{{isDisabled}}" type="text" [(ngModel)]="foodname"></ion-input>
+        <ion-input class="addr_lbl" disabled="{{isDisabled}}" type="text" [(ngModel)]="description"></ion-input>
+        <ion-input class="addr_lbl" disabled="{{isDisabled}}" type="text" [(ngModel)]="quantity"></ion-input>
+        <ion-input class="sno" type="text" placeholder="Passenger Name" [(ngModel)]="pname"></ion-input>
+        <ion-input class="sno" type="text" placeholder="Mobile Number" [(ngModel)]="phone"></ion-input>
+        <ion-input class="sno" type="text" placeholder="Seat Number" [(ngModel)]="seat"></ion-input>
+        <ion-input class="sno" type="text" placeholder="Set Quantity" [(ngModel)]="sqty"></ion-input>
+
+      </div>
+    </div>
+  </div>
+  <div class="main_content_div1">
+    <ion-label class="welcome_lbl">Payment<span style="font-size: 18px;margin-left: 10%;"></span></ion-label>
+    <ion-label class="amount_lbl">Amount Payable <b>( Per Set ) :</b>
+      <ion-input class="amount_lbl2" disabled="{{isDisabled}}" type="text" [(ngModel)]="foodprice"></ion-input>
+    </ion-label>
+    <ion-label class="amount_lbl">Amount Payable <b>( Total Price ) :</b>
+      <ion-input class="totamount_lbl2" disabled="{{isDisabled}}" type="text" [(ngModel)]="totquanamt"></ion-input>
+    </ion-label>
+    <div class="flex_divs">
+      <div class="add_del">
+
+        <div class="qbtn_div" (click)="minus()">
+          <ion-icon name="remove"></ion-icon>
+        </div>
+        <ion-label>{{qty}}</ion-label>
+
+        <div class="qbtn_div" (click)="plus()">
+          <ion-icon name="add"></ion-icon>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="flex_div" (click)="payID = 1">
+      <div class="round_div">
+      </div>
+      <ion-label>Pay with stripe</ion-label>
+    </div>
+    <div class="content_div" *ngIf="payID == 1">
+      <div class="card_div">
+        <ion-radio value="card1"></ion-radio>
+        <div>
+          <ion-label class="small_lbl">Personal</ion-label>
+          <ion-label class="card_lbl">XXXX-XXXX-XXXX-1234</ion-label>
+        </div>
+      </div>
+
+      <div class="card_div">
+        <ion-radio value="card2"></ion-radio>
+        <div>
+          <ion-label class="small_lbl">Office</ion-label>
+          <ion-label class="card_lbl">XXXX-XXXX-XXXX-1234</ion-label>
+        </div>
+      </div>
+      <div class="card_div">
+        <ion-radio value="card3"></ion-radio>
+        <div>
+          <ion-label class="small_lbl">Father</ion-label>
+          <ion-label class="card_lbl">XXXX-XXXX-XXXX-1234</ion-label>
+        </div>
+      </div>
+      <div class="btn_div" (click)="goToSuccess()">
+        <ion-label> Pay (Not Available)</ion-label>
+      </div>
+    </div>
+    <div class="flex_div" (click)="payID = 2">
+      <div class="round_div">
+      </div>
+      <ion-label>Pay with RazorPay</ion-label>
+      <a className='btton'href="https://rzp.io/l/dBy77HQc">Buy Foods</a>
+    </div>
+    <div class="content_div" *ngIf="payID == 2">
+      <ion-input type="text" placeholder="Paypal ID"></ion-input>
+      <div class="btn_div" (click)="goToSuccess()">
+        <ion-label> Pay (Not Available)</ion-label>
+      </div>
+    </div>
+    <div class="flex_div" (click)="payID = 3">
+      <div class="round_div">
+        <img src="assets/imgs/money.png">
+      </div>
+      <ion-label>Cash on Delivery</ion-label>
+    </div>
+    <div class="btn_div" (click)="submitForm()">
+    <ion-label>Confirm Order</ion-label>
+    </div>
+  </div>
+</ion-content>

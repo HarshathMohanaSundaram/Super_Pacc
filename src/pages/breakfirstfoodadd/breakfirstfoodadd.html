@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>BREAKFIRST FOOD ADD</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="main_content_div" [class.ios_pad]="plt == 'ios'">
+    <div class="upper_div">
+      <div class="yellow_div" [class.yellow_div_ios]="plt == 'ios'"></div>
+    </div>
+    <img class="imgs" src="assets/imgs/idli.jpg" />
+    <div class="lower_div">
+      <ion-label class="head_lbl">Break Fast Food</ion-label>
+      <ion-item>
+        <ion-label>
+          Food Name
+        </ion-label>
+        <ion-select [(ngModel)]="fname">
+          <ion-option value="Idly">IDLY</ion-option>
+          <ion-option value="Dhosa">DHOSA</ion-option>
+          <ion-option value="Poori">POORI</ion-option>
+          <ion-option value="Pongal">PONGAL</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-input type="text" placeholder="Food Quantity" [(ngModel)]="fqty"></ion-input>
+      <ion-input type="text" placeholder="Dscription" [(ngModel)]="desc"></ion-input>
+      <ion-input type="text" placeholder="Price" [(ngModel)]="price"></ion-input>
+      <button class="btn" full (click)="add()">SUBMIT</button>
+      <button class="btn1" full (click)="add1()">VIEW ALL</button>
+    </div>
+  </div>
+</ion-content>

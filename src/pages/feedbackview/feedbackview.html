@@ -1,0 +1,27 @@
+<!--
+  Generated template for the FeedbackviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>feedbackview</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item style="height: 150px;" text-wrap *ngFor="let iteme of nadalist">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/meals.jpg" />
+      </ion-thumbnail>
+      <h2 style="color:red"><b>{{iteme.feed}}</b></h2>
+      <h3>{{iteme.foodname}}</h3>
+      <h3>{{iteme.order_id}}</h3>
+      <p style="margin-top: 15px;color:green ;"> ₹{{iteme.foodprice}}</p>
+      <!-- <button ion-button clear item-end (click)="feed(iteme.sno,iteme.food_id,iteme.passenger_id,iteme.order_id,iteme.foodname,
+      iteme.quantity,iteme.description,iteme.foodprice,iteme.payment,iteme.status,iteme.seatno)">Feedback</button> -->
+    </ion-item>
+
+  </ion-list>
+</ion-content>

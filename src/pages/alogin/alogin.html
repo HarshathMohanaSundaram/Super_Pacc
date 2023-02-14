@@ -1,0 +1,29 @@
+<ion-content class="background-page">
+  <img class="img" src="assets/imgs/slide1.jpg" />
+  <div class="div">
+    <img class="imgs" src="assets/imgs/trl.png" />
+    <ion-label class="head_lbl"> Login Page</ion-label>
+    <ion-label  class="small_lbl">Username</ion-label>
+    <ion-input  [type]="getType()" placeholder="Username" [(ngModel)]="username"></ion-input>
+    <ion-label class="small_lbl">Password</ion-label>
+    <ion-input  [type]="getType()" placeholder="Password" [(ngModel)]="pass"></ion-input>
+
+ <a class="type-toggle" (click)="toggleTextPassword()">
+      <ion-icon class="show-option" [hidden]="!showPassword" name="eye-off-outline"></ion-icon>
+      <ion-icon class="hide-option" [hidden]="showPassword" name="eye-outline"></ion-icon>
+   </a>
+
+    <!-- <ion-label class="forgot">Forgot Password</ion-label> -->
+    <button ion-button expand="block" fill="outline" (click)="log()">
+      Login
+    </button>
+    <ion-row style="margin-left: 10%;">
+      <ion-col >
+        <ion-label style="color:white;font-size: 18px;">New User ? </ion-label>
+      </ion-col>
+      <ion-col >
+        <p style="color: red;margin-left: -98%;font-size: 18px;margin-top:0.6em"(click)="reg()">Register</p>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

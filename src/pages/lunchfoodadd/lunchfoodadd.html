@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>LUNCH FOOD ADD</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div" [class.ios_pad]="plt == 'ios'">
+    <div class="upper_div">
+      <div class="yellow_div" [class.yellow_div_ios]="plt == 'ios'"></div>
+    </div>
+    <img class="imgs" src="assets/imgs/biriyani.jpg" />
+    <div class="lower_div">
+      <ion-label class="head_lbl">Lunch Food</ion-label>
+      <ion-item>
+        <ion-label>
+          Food Name
+        </ion-label>
+        <ion-select [(ngModel)]="fname">
+          <ion-option value="Chicken biriyani">CHICKEN BIRIYANI</ion-option>
+          <ion-option value="Mutton biriyani">MUTTON BIRIYANI</ion-option>
+          <ion-option value="Egg biriyani">EGG BIRIYANI</ion-option>
+          <ion-option value="Veg biriyani">VEG BIRIYANI</ion-option>
+          <ion-option value="Full meals">FULL MEALS</ion-option>
+          <ion-option value="Half meals">HALF MEALS</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-input type="text" placeholder="Food Quantity" [(ngModel)]="fqty"></ion-input>
+      <ion-input type="text" placeholder="Dscription" [(ngModel)]="desc"></ion-input>
+      <ion-input type="text" placeholder="Price" [(ngModel)]="price"></ion-input>
+      <button class="btn" full (click)="add()">SUBMIT</button>
+      <button class="btn1" full (click)="add1()">VIEW ALL</button>
+    </div>
+  </div>
+</ion-content>

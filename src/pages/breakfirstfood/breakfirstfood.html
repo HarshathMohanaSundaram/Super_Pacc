@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>BREAKFARST FOOD</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item style="height: 80px;" *ngFor="let iteme of nadalist">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/{{iteme.image}}" />
+      </ion-thumbnail>
+      <h2><b>{{iteme.foodname}}</b></h2>
+      <h3>{{iteme.quantity}}</h3>
+      <p>{{iteme.description}}</p>
+      <button ion-button clear item-end style="color:green ;"> ₹ {{iteme.foodprice}}</button>
+      <button ion-button clear item-end style="color:red ;" (click)="remove(iteme.food_id)"> REMOVE</button>
+    </ion-item>
+    <button ion-fab (click)="add()" style="margin-left: 76%;">
+      <ion-icon name="add" style="font-size: 30px;font-weight: 600;"></ion-icon>
+    </button>
+  </ion-list>
+</ion-content>
